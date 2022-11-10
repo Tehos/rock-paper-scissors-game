@@ -12,6 +12,8 @@ const getComputerChoice = function () {
 let playerScore = 0;
 let computerScore = 0;
 const result = document.querySelector(".result");
+const playerScoreEl = document.querySelector(".player-score");
+const computerScoreEl = document.querySelector(".computer-score");
 
 function playRound(playerSelection, computerSelection) {
   // playerSelection = insesitiveCase(playerSelection);
@@ -37,8 +39,14 @@ const btns = document.querySelectorAll("button");
 btns.forEach((btn) => {
   btn.addEventListener("click", () => {
     console.log(playRound(btn.textContent, getComputerChoice()));
+    countScore();
   });
 });
+
+function countScore() {
+  playerScoreEl.textContent = `Player score: ${playerScore}`;
+  computerScoreEl.textContent = `Computer score: ${computerScore}`;
+}
 
 // const playerSelection = "Rock";
 // const computerSelection = getComputerChoice();
