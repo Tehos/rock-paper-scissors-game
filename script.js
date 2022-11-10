@@ -5,23 +5,32 @@ const getComputerChoice = function () {
   return computerChoice;
 };
 
-function insesitiveCase(string) {
-  return string.charAt(0).toUpperCase() + string.substr(1).toLowerCase();
-}
+// function insesitiveCase(string) {
+//   return string.charAt(0).toUpperCase() + string.substr(1).toLowerCase();
+// }
+
+let playerScore = 0;
+let computerScore = 0;
+const result = document.querySelector(".result");
 
 function playRound(playerSelection, computerSelection) {
-  playerSelection = insesitiveCase(playerSelection);
+  // playerSelection = insesitiveCase(playerSelection);
   if (playerSelection == "Rock" && computerSelection == "Scissors") {
-    return "win";
+    playerScore++;
+    result.textContent = `You win this round! ${playerSelection} beats ${computerSelection}.`;
   } else if (playerSelection == "Paper" && computerSelection == "Rock") {
-    return "win";
+    playerScore++;
+    result.textContent = `You win this round! ${playerSelection} beats ${computerSelection}.`;
   } else if (playerSelection == "Scissors" && computerSelection == "Paper") {
-    return "win";
+    playerScore++;
+    result.textContent = `You win this round! ${playerSelection} beats ${computerSelection}.`;
   } else if (playerSelection == computerSelection) {
-    return "tie";
+    result.textContent = `It's a tie!`;
   } else {
-    return "lose";
+    computerScore++;
+    result.textContent = `You lose this round! ${computerSelection} beats ${playerSelection}.`;
   }
+  return [playerScore, computerScore];
 }
 
 const btns = document.querySelectorAll("button");
