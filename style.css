@@ -2,10 +2,17 @@
   box-sizing: border-box;
   font-family: "Press Start 2P", cursive;
   color: #333;
+  text-align: center;
 }
 
 body {
   background-color: #fff;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 12px;
+  }
 }
 
 header {
