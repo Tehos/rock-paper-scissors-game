@@ -41,12 +41,6 @@ function playRound() {
   countScore();
 }
 
-function checkGame() {
-  if (playerScore === 5 || computerScore === 5) {
-    this.removeEventListener("click", handler);
-  }
-}
-
 function checkWinner() {
   if (playerScore === 5) {
     result.textContent = "You WON the game!";
@@ -62,20 +56,26 @@ function runGame() {
 }
 
 rockBtn.addEventListener("click", function handler() {
-  checkGame();
+  if (playerScore === 5 || computerScore === 5) {
+    this.removeEventListener("click", handler);
+  }
   choice = rockBtn.textContent;
   runGame();
   checkWinner();
 });
 paperBtn.addEventListener("click", function handler() {
-  checkGame();
+  if (playerScore === 5 || computerScore === 5) {
+    this.removeEventListener("click", handler);
+  }
 
   choice = paperBtn.textContent;
   runGame();
   checkWinner();
 });
 scissorsBtn.addEventListener("click", function handler() {
-  checkGame();
+  if (playerScore === 5 || computerScore === 5) {
+    this.removeEventListener("click", handler);
+  }
   choice = scissorsBtn.textContent;
   runGame();
   checkWinner();
