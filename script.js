@@ -41,11 +41,7 @@ function playRound() {
   countScore();
 }
 
-rockBtn.addEventListener("click", function handler() {
-  if (playerScore === 5 || computerScore === 5) {
-    this.removeEventListener("click", handler);
-  }
-  choice = rockBtn.textContent;
+function checkScore() {
   if (playerScore < 5 && computerScore < 5) {
     playRound();
   }
@@ -54,6 +50,14 @@ rockBtn.addEventListener("click", function handler() {
   } else if (computerScore === 5) {
     result.textContent = "You LOST the game!";
   }
+}
+
+rockBtn.addEventListener("click", function handler() {
+  if (playerScore === 5 || computerScore === 5) {
+    this.removeEventListener("click", handler);
+  }
+  choice = rockBtn.textContent;
+  checkScore();
 });
 paperBtn.addEventListener("click", function handler() {
   if (playerScore === 5 || computerScore === 5) {
@@ -64,25 +68,14 @@ paperBtn.addEventListener("click", function handler() {
   if (playerScore < 5 && computerScore < 5) {
     playRound();
   }
-  if (playerScore === 5) {
-    result.textContent = "You WON the game!";
-  } else if (computerScore === 5) {
-    result.textContent = "You LOST the game!";
-  }
+  checkScore();
 });
 scissorsBtn.addEventListener("click", function handler() {
   if (playerScore === 5 || computerScore === 5) {
     this.removeEventListener("click", handler);
   }
   choice = scissorsBtn.textContent;
-  if (playerScore < 5 && computerScore < 5) {
-    playRound();
-  }
-  if (playerScore === 5) {
-    result.textContent = "You WON the game!";
-  } else if (computerScore === 5) {
-    result.textContent = "You LOST the game!";
-  }
+  checkScore();
 });
 
 // const btns = document.querySelectorAll("button");
