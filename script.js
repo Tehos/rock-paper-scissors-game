@@ -54,29 +54,29 @@ function checkWinner() {
   }
 }
 
-rockBtn.addEventListener("click", function handler() {
-  checkGame();
-  choice = rockBtn.textContent;
+function runGame() {
   if (playerScore < 5 && computerScore < 5) {
     playRound();
   }
+}
+
+rockBtn.addEventListener("click", function handler() {
+  checkGame();
+  choice = rockBtn.textContent;
+  runGame();
   checkWinner();
 });
 paperBtn.addEventListener("click", function handler() {
   checkGame();
 
   choice = paperBtn.textContent;
-  if (playerScore < 5 && computerScore < 5) {
-    playRound();
-  }
+  runGame();
   checkWinner();
 });
 scissorsBtn.addEventListener("click", function handler() {
   checkGame();
   choice = scissorsBtn.textContent;
-  if (playerScore < 5 && computerScore < 5) {
-    playRound();
-  }
+  runGame();
   checkWinner();
 });
 
