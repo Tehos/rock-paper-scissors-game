@@ -40,6 +40,7 @@ function playRound() {
   }
   countScore();
 }
+
 function checkGame() {
   if (playerScore === 5 || computerScore === 5) {
     this.removeEventListener("click", handler);
@@ -79,16 +80,3 @@ scissorsBtn.addEventListener("click", function handler() {
   runGame();
   checkWinner();
 });
-
-// const btns = document.querySelectorAll("button");
-// btns.forEach((btn) => {
-//   btn.addEventListener("click", function handler() {
-//     playerChoice = btn.textContent;
-//     computerChoice = getComputerChoice();
-//     console.log(playRound(playerChoice, computerChoice));
-//     console.log(countScore());
-//     if (playerScore >= 5 || computerScore >= 5) {
-//       this.removeEventListener("click", handler);
-//     }
-//   });
-// });
