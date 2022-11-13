@@ -36,10 +36,6 @@ header {
   gap: 10em;
 }
 
-button {
-  font-size: 1.3em;
-}
-
 .scores {
   display: flex;
   justify-content: space-between;
@@ -54,7 +50,7 @@ button {
 .rock {
   background: url(images/rock.png);
   width: 250px;
-  height: 250px;
+  height: 175px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -70,7 +66,7 @@ button {
 }
 .scissors {
   background: url(images/scissors.png);
-  width: 150px;
+  width: 125px;
   height: 250px;
   background-size: contain;
   background-repeat: no-repeat;
@@ -78,10 +74,21 @@ button {
 }
 
 .reset {
+  text-align: center;
   font-size: 2em;
   margin-top: 35px;
   background: none;
   border: none;
+  border: 5px solid #333;
+  padding: 20px 75px;
+}
+
+.reset:hover {
+  cursor: pointer;
+}
+
+.reset:active {
+  transform: translateY(4px);
 }
 
 /* BUTTON HOVER ANIMATION */

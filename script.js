@@ -13,6 +13,8 @@ const btns = document.querySelectorAll("a");
 const rockClass = rockBtn.getAttribute("class");
 const paperClass = paperBtn.getAttribute("class");
 const scissorsClass = scissorsBtn.getAttribute("class");
+const hiddenBtn = document.querySelector(".hide");
+const resetBtn = document.querySelector(".reset");
 
 // GAME FUNCTIONS
 function getComputerChoice() {
@@ -91,7 +93,39 @@ scissorsBtn.addEventListener("click", function handler() {
   runGame();
   checkWinner();
 });
+resetBtn.addEventListener("click", function () {
+  playerScore = 0;
+  computerScore = 0;
+  playerScoreEl.textContent = "Player score: 0";
+  computerScoreEl.textContent = "Computer score: 0";
+  result.textContent = "Choose your form!";
+  rockBtn.addEventListener("click", function handler() {
+    if (playerScore === 5 || computerScore === 5) {
+      this.removeEventListener("click", handler);
+    }
+    choice = capitalizeFirstChar(rockClass);
+    runGame();
+    checkWinner();
+  });
 
+  paperBtn.addEventListener("click", function handler() {
+    if (playerScore === 5 || computerScore === 5) {
+      this.removeEventListener("click", handler);
+    }
+    choice = capitalizeFirstChar(paperClass);
+    runGame();
+    checkWinner();
+  });
+
+  scissorsBtn.addEventListener("click", function handler() {
+    if (playerScore === 5 || computerScore === 5) {
+      this.removeEventListener("click", handler);
+    }
+    choice = capitalizeFirstChar(scissorsClass);
+    runGame();
+    checkWinner();
+  });
+});
 // GAME STYLE AND EFFECTS
 
 // rockBtn.addEventListener("mouseover", function () {
