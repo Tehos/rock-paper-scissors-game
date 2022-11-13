@@ -12,3 +12,4 @@ Background Author: jkjkke <br>
 Background download source: https://opengameart.org/content/background-5 <br>
 Music Author: Dream-Protocol <br>
 Music download source: https://pixabay.com/music/video-games-feed-the-machine-classic-arcade-game-116846/ <br>
+Rock Paper Scissors made in Illustrator.
