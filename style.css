@@ -1,12 +1,18 @@
 * {
   box-sizing: border-box;
   font-family: "Press Start 2P", cursive;
-  color: #333;
+  color: #fff;
   text-align: center;
 }
 
 body {
-  background-color: #fff;
+  background:linear-gradient(
+    rgba(0, 0, 0, 0.7), 
+    rgba(255, 255, 255, 0.082)
+  ), url(images/background-jkjkke.png);
+  background-position: center;
+  background-size: cover;
+  background
 }
 
 @media only screen and (max-width: 600px) {
@@ -19,14 +25,20 @@ header {
   padding: 50px 0;
 }
 
+footer{
+  padding-bottom: 50px;
+}
+
+
+
 .container {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  max-width: 75vw;
-  height: 95vh;
+  max-width: 55vw;
+  height: 100vh;
 }
 
 .buttons {
@@ -79,7 +91,7 @@ header {
   margin-top: 35px;
   background: none;
   border: none;
-  border: 5px solid #333;
+  /* border: 5px solid #333; */
   padding: 20px 75px;
 }
 
