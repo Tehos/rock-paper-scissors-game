@@ -1,3 +1,4 @@
+// VARIABLES
 const choices = ["Rock", "Paper", "Scissors"];
 let choice = "";
 let playerScore = 0;
@@ -13,6 +14,7 @@ const rockClass = rockBtn.getAttribute("class");
 const paperClass = paperBtn.getAttribute("class");
 const scissorsClass = scissorsBtn.getAttribute("class");
 
+// GAME FUNCTIONS
 function getComputerChoice() {
   return choices[Math.floor(Math.random() * 3)];
 }
@@ -62,6 +64,7 @@ function capitalizeFirstChar(string) {
   return string[0].toUpperCase() + string.substring(1);
 }
 
+// GAME BUTTON FUNCTIONALITY
 rockBtn.addEventListener("click", function handler() {
   if (playerScore === 5 || computerScore === 5) {
     this.removeEventListener("click", handler);
@@ -88,3 +91,9 @@ scissorsBtn.addEventListener("click", function handler() {
   runGame();
   checkWinner();
 });
+
+// GAME STYLE AND EFFECTS
+
+// rockBtn.addEventListener("mouseover", function () {
+//   rockBtn.setAttribute("style" );
+// });
