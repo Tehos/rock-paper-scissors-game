@@ -15,6 +15,8 @@ const paperClass = paperBtn.getAttribute("class");
 const scissorsClass = scissorsBtn.getAttribute("class");
 const hiddenBtn = document.querySelector(".hide");
 const resetBtn = document.querySelector(".reset");
+const audioEl = document.querySelector("audio");
+const music = document.querySelector(".music");
 
 // GAME FUNCTIONS
 function getComputerChoice() {
@@ -131,3 +133,20 @@ resetBtn.addEventListener("click", function () {
 // rockBtn.addEventListener("mouseover", function () {
 //   rockBtn.setAttribute("style" );
 // });
+
+console.log(audioEl.canPlayType("audio/mpeg"));
+console.log(audioEl.canPlayType("audio/ogg"));
+
+music.addEventListener("click", function playMusic() {
+  if (audioEl.paused) {
+    audioEl.play();
+    music.classList.toggle("mute");
+  } else {
+    audioEl.pause();
+    music.classList.toggle("mute");
+  }
+});
+
+audioEl.addEventListener("ended", () => {
+  music.classList.toggle("mute");
+});

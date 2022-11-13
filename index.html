@@ -14,6 +14,7 @@
     <title>Rock Paper Scissors</title>
   </head>
   <body>
+    <div class="music"></div>
     <div class="container">
       <header>
         <h1>Rock Paper Scissors Game</h1>
@@ -33,7 +34,19 @@
         Copyright <span>&copy</span> Teodor Postolache
       </footer>
     </div>
-    <audio src='audio/feed-the-machine-classic-arcade-game-116846.mp3' autoplay>
+    <audio>
+      <source
+        src="audio/feed-the-machine-classic-arcade-game-116846.mp3"
+        type="audio/mpeg"
+      />
+      <source
+        src="audio/feed-the-machine-classic-arcade-game-116846.ogg"
+        type="audio/ogg"
+      />
+      <!-- fallback for non supporting browsers goes here -->
+      <p>Your browser does not support HTML audio.</p>
+    </audio>
+
     <script src="script.js"></script>
   </body>
 </html>

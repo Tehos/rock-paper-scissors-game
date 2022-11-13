@@ -6,6 +6,7 @@
 }
 
 body {
+  position: relative;
   background:linear-gradient(
     rgba(0, 0, 0, 0.7), 
     rgba(255, 255, 255, 0.082)
@@ -28,7 +29,6 @@ header {
 footer{
   padding-bottom: 50px;
 }
-
 
 
 .container {
@@ -132,4 +132,22 @@ a{
 .scissors:hover {
   animation: floating 1.5s ease-in-out infinite;
   cursor: pointer;
+}
+
+/* MUSIC */
+.music{
+  position: absolute;
+  margin: 50px;
+  margin-left: 75px;
+  width: 158px;
+  height: 158px;
+  background: url('images/audio\ crossed.png');
+}
+
+.music:hover{
+  cursor:pointer;
+}
+
+.mute{
+  background: url('images/audio.png');
 }
