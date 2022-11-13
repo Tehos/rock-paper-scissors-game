@@ -128,10 +128,11 @@ a {
 .music {
   position: absolute;
   margin: 50px;
-  margin-left: 75px;
-  width: 158px;
-  height: 158px;
+  margin-left: 175px;
+  width: 75px;
+  height: 75px;
   background: url("images/audio\ crossed.png");
+  background-size: contain;
 }
 
 .music:hover {
@@ -140,4 +141,5 @@ a {
 
 .mute {
   background: url("images/audio.png");
+  background-size: contain;
 }
