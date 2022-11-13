@@ -26,7 +26,7 @@ header {
   align-items: center;
   justify-content: space-between;
   max-width: 75vw;
-  height: 75vh;
+  height: 95vh;
 }
 
 .buttons {
@@ -75,6 +75,13 @@ button {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.reset {
+  font-size: 2em;
+  margin-top: 35px;
+  background: none;
+  border: none;
 }
 
 /* BUTTON HOVER ANIMATION */
