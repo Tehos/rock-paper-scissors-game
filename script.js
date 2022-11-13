@@ -96,37 +96,12 @@ scissorsBtn.addEventListener("click", function handler() {
   checkWinner();
 });
 resetBtn.addEventListener("click", function () {
+  choice = "";
   playerScore = 0;
   computerScore = 0;
   playerScoreEl.textContent = "Player score: 0";
   computerScoreEl.textContent = "Computer score: 0";
   result.textContent = "Choose your form!";
-  rockBtn.addEventListener("click", function handler() {
-    if (playerScore === 5 || computerScore === 5) {
-      this.removeEventListener("click", handler);
-    }
-    choice = capitalizeFirstChar(rockClass);
-    runGame();
-    checkWinner();
-  });
-
-  paperBtn.addEventListener("click", function handler() {
-    if (playerScore === 5 || computerScore === 5) {
-      this.removeEventListener("click", handler);
-    }
-    choice = capitalizeFirstChar(paperClass);
-    runGame();
-    checkWinner();
-  });
-
-  scissorsBtn.addEventListener("click", function handler() {
-    if (playerScore === 5 || computerScore === 5) {
-      this.removeEventListener("click", handler);
-    }
-    choice = capitalizeFirstChar(scissorsClass);
-    runGame();
-    checkWinner();
-  });
 });
 // GAME STYLE AND EFFECTS
 
