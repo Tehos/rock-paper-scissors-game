@@ -31,6 +31,8 @@ header {
 
 .buttons {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 50px;
 }
 
@@ -47,4 +49,29 @@ button {
 
 .result {
   font-size: 1.3em;
+}
+
+.rock {
+  background: url(images/rock.png);
+  width: 250px;
+  height: 250px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.paper {
+  background: url(images/paper.png);
+  width: 200px;
+  height: 200px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.scissors {
+  background: url(images/scissors.png);
+  width: 250px;
+  height: 250px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
