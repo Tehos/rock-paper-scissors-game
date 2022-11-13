@@ -68,41 +68,34 @@ function capitalizeFirstChar(string) {
   return string[0].toUpperCase() + string.substring(1);
 }
 
-// GAME BUTTON FUNCTIONALITY
-rockBtn.addEventListener("click", function handler() {
-  if (playerScore === 5 || computerScore === 5) {
-    this.removeEventListener("click", handler);
-  }
-  choice = capitalizeFirstChar(rockClass);
-  runGame();
-  checkWinner();
-});
-
-paperBtn.addEventListener("click", function handler() {
-  if (playerScore === 5 || computerScore === 5) {
-    this.removeEventListener("click", handler);
-  }
-  choice = capitalizeFirstChar(paperClass);
-  runGame();
-  checkWinner();
-});
-
-scissorsBtn.addEventListener("click", function handler() {
-  if (playerScore === 5 || computerScore === 5) {
-    this.removeEventListener("click", handler);
-  }
-  choice = capitalizeFirstChar(scissorsClass);
-  runGame();
-  checkWinner();
-});
-resetBtn.addEventListener("click", function () {
+function resetGame() {
   choice = "";
   playerScore = 0;
   computerScore = 0;
   playerScoreEl.textContent = "Player score: 0";
   computerScoreEl.textContent = "Computer score: 0";
   result.textContent = "Choose your form!";
+}
+
+// GAME BUTTON FUNCTIONALITY
+rockBtn.addEventListener("click", function handler() {
+  choice = capitalizeFirstChar(rockClass);
+  runGame();
+  checkWinner();
 });
+
+paperBtn.addEventListener("click", function handler() {
+  choice = capitalizeFirstChar(paperClass);
+  runGame();
+  checkWinner();
+});
+
+scissorsBtn.addEventListener("click", function handler() {
+  choice = capitalizeFirstChar(scissorsClass);
+  runGame();
+  checkWinner();
+});
+resetBtn.addEventListener("click", resetGame);
 // GAME STYLE AND EFFECTS
 
 // rockBtn.addEventListener("mouseover", function () {
