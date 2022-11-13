@@ -9,6 +9,9 @@ const rockBtn = document.querySelector(".rock");
 const paperBtn = document.querySelector(".paper");
 const scissorsBtn = document.querySelector(".scissors");
 const btns = document.querySelectorAll("a");
+const rockClass = rockBtn.getAttribute("class");
+const paperClass = paperBtn.getAttribute("class");
+const scissorsClass = scissorsBtn.getAttribute("class");
 
 function getComputerChoice() {
   return choices[Math.floor(Math.random() * 3)];
@@ -55,28 +58,33 @@ function runGame() {
   }
 }
 
+function capitalizeFirstChar(string) {
+  return string[0].toUpperCase() + string.substring(1);
+}
+
 rockBtn.addEventListener("click", function handler() {
   if (playerScore === 5 || computerScore === 5) {
     this.removeEventListener("click", handler);
   }
-  choice = rockBtn.textContent;
+  choice = capitalizeFirstChar(rockClass);
   runGame();
   checkWinner();
 });
+
 paperBtn.addEventListener("click", function handler() {
   if (playerScore === 5 || computerScore === 5) {
     this.removeEventListener("click", handler);
   }
-
-  choice = paperBtn.textContent;
+  choice = capitalizeFirstChar(paperClass);
   runGame();
   checkWinner();
 });
+
 scissorsBtn.addEventListener("click", function handler() {
   if (playerScore === 5 || computerScore === 5) {
     this.removeEventListener("click", handler);
   }
-  choice = scissorsBtn.textContent;
+  choice = capitalizeFirstChar(scissorsClass);
   runGame();
   checkWinner();
 });
